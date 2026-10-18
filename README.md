@@ -9,6 +9,7 @@
   <img src="https://img.shields.io/badge/Node.js-22_LTS-339933?logo=nodedotjs&logoColor=white" alt="Node.js 22">
   <img src="https://img.shields.io/badge/database-SQLite%20%7C%20PostgreSQL-4169E1?logo=postgresql&logoColor=white" alt="SQLite or PostgreSQL">
   <img src="https://img.shields.io/badge/AI-OpenRouter-6366F1" alt="AI via OpenRouter">
+  <img src="https://img.shields.io/badge/license-proprietary-red" alt="License: proprietary">
 </p>
 
 <p align="center">
@@ -717,6 +718,8 @@ GitHub Actions ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)) runs typ
 
 ## 📄 License
 
-No license has been chosen for this project yet. Until one is added, all rights are reserved by the repository owner.
+**Proprietary software. All rights reserved.** © 2026 Mostafijemon24.
+
+This repository is not open source. No one may use, copy, modify, distribute, host or sell any part of it without prior written permission. See [LICENSE](LICENSE) for the full terms.
 
 <p align="center"><sub>Built for agencies that want social media to run itself, without making things up.</sub></p>
