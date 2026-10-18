@@ -109,9 +109,7 @@ https://app.yourdomain.com/api/oauth/<platform>/callback
    # অনুমোদন পেলে: LINKEDIN_ORG_ACCESS=true
    # ঐচ্ছিক: LINKEDIN_API_VERSION=202509   (YYYYMM ফরম্যাট)
    ```
-6. বর্তমানে LinkedIn-এ **টেক্সট (আর লিংক) পোস্ট** যায়; ছবি আপলোড এখনো যুক্ত হয়নি।
-
-> LinkedIn-এ এখন **ছবি আর ভিডিও** যায় (Images API ও Videos API; ভিডিও ৩ সেকেন্ড – ৩০ মিনিট, MP4)। Likes/comments সংখ্যা আসে; reach শুধু Company page-এর জন্য LinkedIn দেয়, তাই দেখানো হয় না।
+6. LinkedIn-এ এখন **ছবি আর ভিডিও** যায় (Images API ও Videos API; ভিডিও ৩ সেকেন্ড – ৩০ মিনিট, MP4)। Likes/comments সংখ্যা আসে; reach শুধু Company page-এর জন্য LinkedIn দেয়, তাই দেখানো হয় না।
 
 ### ৩.৩ X (Twitter)
 1. https://developer.x.com → Project আর App তৈরি করুন।
@@ -135,7 +133,7 @@ https://app.yourdomain.com/api/oauth/<platform>/callback
    PINTEREST_APP_ID=...
    PINTEREST_APP_SECRET=...
    ```
-5. Pinterest-এ **ছবি বাধ্যতামূলক** (Image URL)। Pin যায় আপনি যে বোর্ড চালু করবেন সেখানে।
+5. Pinterest-এ **ছবি বা ভিডিও বাধ্যতামূলক**। Pin যায় আপনি যে বোর্ড চালু করবেন সেখানে।
 
 ### ৩.৫ Google Business Profile
 1. https://console.cloud.google.com → নতুন Project।
@@ -164,7 +162,7 @@ https://app.yourdomain.com/api/oauth/<platform>/callback
 ## ৫. প্রথম লাইভ টেস্ট (প্রতিটা প্ল্যাটফর্মে একবার)
 
 1. একটা টেস্ট পেজ/অ্যাকাউন্ট কানেক্ট করে চালু করুন।
-2. Content Studio-তে একটা ছোট পোস্ট লিখুন (Instagram/Pinterest হলে Image URL দিন)।
+2. Content Studio-তে একটা ছোট পোস্ট লিখুন (Instagram/Pinterest হলে ছবি যোগ করুন)।
 3. **Schedule** → সেই destination বেছে নিন → সময় দিন **২-৩ মিনিট পরে**।
 4. সময় পার হলে দেখুন:
    - **All content**-এ পোস্ট **Published** হয়েছে কিনা।

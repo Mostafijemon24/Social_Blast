@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="Social Blast — website-grounded social media for agencies">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#312e81"/>
+      <stop offset="0.55" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.85" cy="0.2" r="0.6">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="320" rx="24" fill="url(#bg)"/>
+  <rect width="1280" height="320" rx="24" fill="url(#glow)"/>
+  <g opacity="0.12" stroke="#ffffff" stroke-width="2" fill="none">
+    <circle cx="1120" cy="250" r="120"/>
+    <circle cx="1120" cy="250" r="180"/>
+    <circle cx="1120" cy="250" r="240"/>
+  </g>
+  <g transform="translate(96 96)">
+    <rect width="128" height="128" rx="30" fill="#ffffff"/>
+    <path d="M100 30 L22 62 L54 76 L68 108 Z" fill="#4f46e5"/>
+    <path d="M54 76 L100 30 L68 108 Z" fill="#3730a3"/>
+  </g>
+  <text x="272" y="160" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="76" font-weight="700" fill="#ffffff" letter-spacing="-1.5">Social Blast</text>
+  <text x="276" y="218" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="500" fill="#e0e7ff">Website-grounded social media content, scheduling</text>
+  <text x="276" y="254" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="26" font-weight="500" fill="#e0e7ff">and automation for marketing agencies</text>
+</svg>

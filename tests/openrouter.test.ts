@@ -35,11 +35,11 @@ beforeEach(async () => {
 after(async () => { (await import('../src/server/db')).closeDb(); });
 
 test('OpenRouter is used when the key is set; request has model, schema, app headers', async () => {
-  process.env.OPENROUTER_MODEL = 'anthropic/claude-sonnet-4';
+  process.env.OPENROUTER_MODEL = 'mistralai/mistral-small';
   const { activeProvider } = await import('../src/server/generator');
   const p = activeProvider();
   assert.equal(p.id, 'openrouter');
-  assert.equal(p.label, 'OpenRouter · anthropic/claude-sonnet-4');
+  assert.equal(p.label, 'OpenRouter · mistralai/mistral-small');
   assert.ok(p.languages.includes('Bengali'));
   respond = () => reply(good);
   const out = await p.generate(input);
@@ -50,7 +50,7 @@ test('OpenRouter is used when the key is set; request has model, schema, app hea
   assert.equal(c.headers.get('authorization'), 'Bearer sk-or-test');
   assert.equal(c.headers.get('x-title'), 'Social Blast');
   assert.equal(c.headers.get('http-referer'), 'https://app.example');
-  assert.equal(c.body.model, 'anthropic/claude-sonnet-4');
+  assert.equal(c.body.model, 'mistralai/mistral-small');
   assert.equal(c.body.response_format.type, 'json_schema');
   assert.equal(c.body.messages[0].role, 'system');
   assert.match(c.body.messages[1].content, /Language: Bengali/);

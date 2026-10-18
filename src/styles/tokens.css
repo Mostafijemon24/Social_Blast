@@ -1,8 +1,7 @@
 /* ------------------------------------------------------------------
    Design tokens — AI Social Media Management SaaS
-   Generated from replica/design/tokens.json. Edit the JSON, re-run the
-   contrast gate, then regenerate this file. Components reference these
-   variables (via Tailwind: bg-surface, text-muted, ring-focus) — never a
+   Edit colours here only (and keep text/background contrast at WCAG AA).
+   Components reference these variables (via Tailwind: bg-surface, text-muted, ring-focus) — never a
    raw hex.
 
    Theme switching: default is light. Dark applies when <html data-theme="dark">
