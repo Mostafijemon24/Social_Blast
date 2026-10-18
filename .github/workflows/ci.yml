@@ -1,0 +1,47 @@
+# Runs on every push and pull request: typecheck, lint, tests on SQLite and
+# PostgreSQL, and a production build. A red ✗ on GitHub means something broke.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: sb
+          POSTGRES_PASSWORD: sb
+          POSTGRES_DB: socialblast_test
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U sb" --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Lint
+        run: npm run lint
+      - name: Tests (SQLite)
+        run: npm test
+      - name: Tests (PostgreSQL)
+        run: npm run test:pg
+        env:
+          DATABASE_URL: postgres://sb:sb@localhost:5432/socialblast_test
+      - name: Build
+        run: npm run build
